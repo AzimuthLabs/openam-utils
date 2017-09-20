@@ -79,7 +79,7 @@ public class OpenAMAuthenticator extends JiraSeraphAuthenticator {
                 if (tokenID != null) {
                     // Pass TokenID to OpenAM to validate session
                     // OpenAM will return UID as part of the response
-                    String url = "https://idp.azlabs.sg/openam/json/sessions/"
+                    String url = "https://<am-server-url>/<am-context-uri>/json/sessions/"
                                  + tokenID +"/?_action=validate";
                     HttpPostConnection connection = new HttpPostConnection(url);
                     String response = connection.executeWithResponse();
